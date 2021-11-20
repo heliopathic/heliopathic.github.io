@@ -3,12 +3,29 @@
    <body>
         <title>HTML Forms</title>
     <center>
+       <script>
+           String msg = session.getAttribute("error");
+           if (msg != null) {
+               %><p style="color:red"><%= msg %></p><%
+           }
+       </script>
        <br><br><br><img class=center src="https://i.ytimg.com/vi/WeZtLiuBEgw/maxresdefault.jpg" alt="sayMyName" width="525" height="300" /> <br><br>
-       <form action="/action_page.php" accept-charset="utf-8">
+       <form onSubmit="return checkAnswer();" accept-charset="utf-8">
           <label for="answer">Answer:</label>
           <input type="text" id="answer" name="answer"><br><br>
           <input type="submit" value="Submit">
        </form>
+       <script>
+        function checkAnswer(){
+          var response = document.getElementById('answer').value;
+          if (response == "fireball")
+              location = 'https://heliopathic.github.io/'; // 'right.html';
+          else
+              location = 'https://heliopathic.github.io/'; // 'wrong.html';
+              session.setAttribute("error", "Incorrect");
+          return false;
+          }
+       </script>
     </center>
    </body>
 </html>
