@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
     <body>
-    <title>Stage 1</title>
+    <title>Stage 5</title>
+    <div style="padding: 10px; margin-left: 75%;">
+        <BUTTON TYPE="button" ONCLICK="window.open('img-src/s5_hint.jpg');">Hint!</BUTTON>
+    </div>
     <center>
-        <br><br><br><img class=center src="https://i.ytimg.com/vi/WeZtLiuBEgw/maxresdefault.jpg" alt="sayMyName" width="525" height="300" /> <br><br>
+        <div class="main">
+            <span>Okay lets talk about this guy. Honestly speaking even this guy doesn't know why tf you are fangirling him.
+                I mean, he sucks at what he does. I have tried telling you this a lottt. He is the typical Shikhari Shambu(chakka muyal thing).
+                On one such occasion he has openly admitted he blindly see-saw(ed) and somehow all went well.
+                I'm pretty sure you have laughed like hell watching that! Use the hint only if you really need to!</span>
+        </div>
         <form onSubmit="return checkAnswer();" accept-charset="utf-8">
             <label for="answer">Answer:</label>
             <input type="text" id="answer" name="answer"><br><br>
@@ -19,11 +27,11 @@
             }
             function checkAnswer(){
                 var response = document.getElementById('answer').value;
-                if (response == "fireball")
-                    window.location = 'stage1_pass.html'; // 'right.html';
+                if (response == "Thirumandan")
+                    window.location = 'stage5_pass.html'; // 'right.html';
                 else
                     // session.setAttribute("error", "Incorrect");
-                    window.location = 'stage1_fail.html'; // 'wrong.html';
+                    window.location = 'stage5_fail.html'; // 'wrong.html';
                 return false;
             }
         </script>

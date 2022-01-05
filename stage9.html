@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <body>
-    <title>Stage 1</title>
+    <title>Finale</title>
     <center>
-        <br><br><br><img class=center src="https://i.ytimg.com/vi/WeZtLiuBEgw/maxresdefault.jpg" alt="sayMyName" width="525" height="300" /> <br><br>
+        <h3><span>I guess well done?</span></h3>
+        <br><br><br><img class=center src="img-src/stage9.jpg" alt="stage9" width="645" height="700" /> <br><br>
         <form onSubmit="return checkAnswer();" accept-charset="utf-8">
             <label for="answer">Answer:</label>
             <input type="text" id="answer" name="answer"><br><br>
@@ -19,11 +20,11 @@
             }
             function checkAnswer(){
                 var response = document.getElementById('answer').value;
-                if (response == "fireball")
-                    window.location = 'stage1_pass.html'; // 'right.html';
+                if (response == "Aparecium")
+                    window.location = 'stage9_pass.html'; // 'right.html';
                 else
                     // session.setAttribute("error", "Incorrect");
-                    window.location = 'stage1_fail.html'; // 'wrong.html';
+                    window.location = 'stage9_fail.html'; // 'wrong.html';
                 return false;
             }
         </script>
