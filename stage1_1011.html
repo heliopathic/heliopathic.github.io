@@ -4,11 +4,12 @@
     <title>Stage 1</title>
     <center>
         <br><br><br><img class=center src="https://i.ytimg.com/vi/WeZtLiuBEgw/maxresdefault.jpg" alt="sayMyName" width="525" height="300" /> <br><br>
-        <form onSubmit="return checkAnswer();" accept-charset="utf-8">
+        <form onSubmit="return checkAnswer('1_1011');" accept-charset="utf-8">
             <label for="answer">Answer:</label>
             <input type="text" id="answer" name="answer"><br><br>
             <input type="submit" value="Submit">
         </form>
+        <script type="text/javascript" src="verify.js"></script>
         <!-- <body onload="checkError();"> -->
         <script>
             function checkError(){
@@ -16,15 +17,6 @@
                 console.log(msg)
                 if(session.getAttribute("error")!=null){ document.write('<p style="color:red"><%= session.getAttribute("error") %></p>')
                 ; console.log(session.getAttribute("error"));}
-            }
-            function checkAnswer(){
-                var response = document.getElementById('answer').value;
-                if (response == "fireball")
-                    window.location = 'stage1_pass.html'; // 'right.html';
-                else
-                    // session.setAttribute("error", "Incorrect");
-                    window.location = 'stage1_fail.html'; // 'wrong.html';
-                return false;
             }
         </script>
     </center>
